@@ -1,0 +1,188 @@
+:root {
+    --blue: #71abfe;
+    --bg: #1f2227;
+    --white:  #fbfbfb;
+}
+
+body {
+    background: var(--bg);
+    color:  var(--white);
+    font-family: sans-serif;
+}
+
+main > input {
+    display: none;
+}
+.slide1 { background-image: url("memes/1.webp"); }
+.slide2 { background-image: url("memes/2.webp"); }
+.slide3 { background-image: url("memes/3.webp"); }
+.slide4 { background-image: url("memes/4.webp"); }
+.slide5 { background-image: url("memes/5.webp"); }
+.slide6 { background-image: url("memes/6.webp"); }
+
+
+#check1:checked ~ div .slides { transform: translate(0, 0) }
+#check2:checked ~ div .slides { transform: translate(-100%, 0) }
+#check3:checked ~ div .slides { transform: translate(-200%, 0)  }
+#check4:checked ~ div .slides { transform: translate(-300%, 0)  }
+#check5:checked ~ div .slides { transform: translate(-400%, 0)  }
+#check6:checked ~ div .slides { transform: translate(-500%, 0)  }
+
+#check1:checked ~ div .text { transform: translate(0, 0) }
+#check2:checked ~ div .text { transform: translate(-100%, 0) }
+#check3:checked ~ div .text { transform: translate(-200%, 0)  }
+#check4:checked ~ div .text { transform: translate(-300%, 0)  }
+#check5:checked ~ div .text { transform: translate(-400%, 0)  }
+#check6:checked ~ div .text { transform: translate(-500%, 0)  }
+
+
+#check1:checked ~ ul > li > label[for=check1] > span {
+    border: 3px solid var(--blue);
+    background-color: transparent;
+}
+#check2:checked ~ ul > li > label[for=check2] > span {
+    border: 3px solid var(--blue);
+    background-color: transparent;
+}
+#check3:checked ~ ul > li > label[for=check3] > span {
+    border: 3px solid var(--blue);
+    background-color: transparent;
+}
+#check4:checked ~ ul > li > label[for=check4] > span {
+    border: 3px solid var(--blue);
+    background-color: transparent;
+}
+#check5:checked ~ ul > li > label[for=check5] > span {
+    border: 3px solid var(--blue);
+    background-color: transparent;
+}
+#check6:checked ~ ul > li > label[for=check6] > span {
+    border: 3px solid var(--blue);
+    background-color: transparent;
+}
+
+#check1:checked ~ ul > li > label[for=check1]:hover span {
+    border: 3px solid var(--white);
+    background-color: transparent;
+}
+#check2:checked ~ ul > li > label[for=check2]:hover span {
+    border: 3px solid var(--white);
+    background-color: transparent;
+}
+#check3:checked ~ ul > li > label[for=check3]:hover span {
+    border: 3px solid var(--white);
+    background-color: transparent;
+}
+#check4:checked ~ ul > li > label[for=check4]:hover span {
+    border: 3px solid var(--white);
+    background-color: transparent;
+}
+#check5:checked ~ ul > li > label[for=check5]:hover span {
+    border: 3px solid var(--white);
+    background-color: transparent;
+}
+#check6:checked ~ ul > li > label[for=check6]:hover span {
+    border: 3px solid var(--white);
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#slider {
+    display: flex;
+    width: 95%;
+    margin: 20px auto;
+    border: 1px solid #000000;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: #000000;
+
+}
+#textTitles {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+.slides,
+.text{
+    width: 100%;
+    display: flex;
+    transition: transform 0.2s ease;
+}
+.text > div{
+    padding-left: 2.5%;
+    box-sizing: border-box;
+}
+.slides > div,
+.text > div {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: left;
+    font-size: 2em;
+
+}
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    ul {
+       margin: 0 0 0 auto;
+       justify-content: flex-end;
+    }
+}
+ul li {
+    list-style: none;
+}
+ul li label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    padding: 5px 20px;
+}
+ul li label span {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: var(--blue);
+    box-sizing: border-box;
+    transition: background 0.15s ease;
+}
+ul li label:hover span {
+    background: var(--white);
+    transition: background 0.15s ease;
+}
